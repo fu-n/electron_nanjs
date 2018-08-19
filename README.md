@@ -6,7 +6,7 @@ Electron Application for testing nanjs.
 
 1. install nodejs for windows
    * https://nodejs.org/ja/download/
-   * add "c:\Program Files\nodejs" to PATH environment variable.
+   * add "c:\Program Files\nodejs" and "c:\Users\\\<username\>\\AppData\Roaming\npm" to PATH environment variable.
 
 2. start powershell
    * press [Win] key and type "power[enter]"
@@ -25,7 +25,7 @@ Electron Application for testing nanjs.
    ````
    PS(admin)> npm install -g --production windows-build-tools
    ````
-   * add "c:\Users\[username]\.windows-build-tools\python27" to PATH environment variable.
+   * add "c:\Users\\\<username\>\\.windows-build-tools\python27" to PATH environment variable.
    * close administrator powershell.
 
 6. install packages
@@ -39,14 +39,14 @@ Electron Application for testing nanjs.
    ````
    * https://teratail.com/questions/19029
 
-8. copy [electron version]
+8. copy \<electron version\>
    ````
    PS> electron --version
    ````
 
 9. rebuild some node packages for electron
    ````
-   PS> ./node_modules/.bin/electron-rebuild -v [electron version]
+   PS> ./node_modules/.bin/electron-rebuild -v <electron version>
    ````
    * you need to rebuild every npm install/update.
 
