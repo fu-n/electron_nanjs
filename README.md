@@ -55,7 +55,7 @@ Electron Application for testing nanjs.
     PS> electron .
     ````
     * have fun!
-    * if you want debbuger, "electron --inspect 9229 ." and open "chrome://inspect" by chrome browser.
+    * if you want debugger, "electron --inspect 9229 ." and open "chrome://inspect" by chrome browser.
 
 ## Mac: Build Instruction
 
