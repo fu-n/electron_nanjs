@@ -2,6 +2,18 @@ var electron = require('electron');
 var remote   = electron.remote;
 var enanjs   = remote.require('./electron_nanjs');
 
+function getEnv() {
+    var env      = enanjs.getEnv()
+    var clientId = enanjs.getClientId()
+    var response = '';
+    if (!env || !clientId) {
+        response = 'no .env file? nanjs work in default config maybe.';
+    } else {
+        response = "ENV=" + env + ", CLIENT_ID=" + clientId;
+    }
+    setResponse("getEnvResponse", response);
+}
+
 function generateMnemonic() {
     var mnemonic = enanjs.generateMnemonic()
     setValue("createWallet.mnemonic", mnemonic);

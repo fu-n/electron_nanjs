@@ -1,5 +1,15 @@
 const nanjs = require("nanjs");
 class ElectronNanjs {
+    getEnv() {
+        var response = process.env.ENV;
+        return response;
+    }
+
+    getClientId() {
+        var response = process.env.CLIENT_ID;
+        return response;
+    }
+
     generateMnemonic() {
         var response = nanjs.wallet.generateMnemonic();
         console.log('generateMnemonic', response);

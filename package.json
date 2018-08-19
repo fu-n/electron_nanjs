@@ -4,7 +4,8 @@
   "description": "electron application",
   "main": "app.js",
   "dependencies": {
-    "nanjs": "fu-n/nanj-js#master"
+    "nanjs": "fu-n/nanj-js#master",
+    "dotenv": "*"
   },
   "devDependencies": {
     "electron-prebuilt": "^1.4.13",

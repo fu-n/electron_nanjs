@@ -2,6 +2,7 @@
 const electron      = require("electron");
 const BrowserWindow = electron.BrowserWindow;
 const app           = electron.app;
+const dotenv        = require('dotenv').config();
 
 let browserWindow = null;
 
