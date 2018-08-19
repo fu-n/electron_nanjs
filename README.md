@@ -15,7 +15,6 @@ Electron Application for testing nanjs.
    ````
    PS> Start-Process powershell -Verb runas
    ````
-
 4. install electron
    ````
    PS(admin)> npm install -g electron
@@ -30,6 +29,7 @@ Electron Application for testing nanjs.
 
 6. install packages
    ````
+   PS> cd <your cloned electron_nanjs directory>
    PS> npm install
    ````
 
