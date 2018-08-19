@@ -1,0 +1,63 @@
+<html>
+<body>
+debug.html
+
+<h1>ElectronNanjs</h1>
+
+<dt>generateMnemonic</dt>
+<dd id="generateMnemonicResponse">(ready)</dd>
+<dd><button onclick="generateMnemonic()">call</button></dd>
+<br>
+
+<dt>createWallet</dt>
+<dd id="createWalletResponse">(ready)</dd>
+<dd>mnemonic: <input id="createWallet.mnemonic" type="text" /></dd>
+<dd>password: <input id="createWallet.password" type="text" /></dd>
+<dd><button onclick="createWallet()">call</button></dd>
+<br>
+
+<dt>importWallet</dt>
+<dd id="importWalletResponse">(ready)</dd>
+<dd>keystore: <input id="importWallet.keystore" type="text" /></dd>
+<dd>password: <input id="importWallet.password" type="text" /></dd>
+<dd><button onclick="importWallet()">call</button></dd>
+<br>
+
+<dt>generateAddress</dt>
+<dd id="generateAddressResponse">(ready)</dd>
+<dd>address:    <input id="generateAddress.address"    type="text" /></dd>
+<dd>privateKey: <input id="generateAddress.privateKey" type="text" /></dd>
+<dd><button onclick="generateAddress()">call</button></dd>
+<br>
+
+<dt>generateQRCode</dt>
+<dd id="generateQRCodeResponse">(ready)</dd>
+<dd>address: <input id="generateQRCode.address" type="text" /></dd>
+<dd><button onclick="generateQRCode()">call</button></dd>
+<br>
+
+<dt>transfer</dt>
+<dd id="transferResponse">(ready)</dd>
+<dd>from:    <input id="transfer.from"    type="text" /></dd>
+<dd>to:      <input id="transfer.to"      type="text" /></dd>
+<dd>amount:  <input id="transfer.amount"  type="text" /></dd>
+<dd>message: <input id="transfer.message" type="text" /></dd>
+<dd><button onclick="transfer()">call</button></dd>
+<br>
+
+<dt>history</dt>
+<dd id="historyResponse">(ready)</dd>
+<dd>address: <input id="history.address" type="text" /></dd>
+<dd>page:    <input id="history.page"    type="text" /></dd>
+<dd><button onclick="history()">call</button></dd>
+<br>
+
+<dt>rate</dt>
+<dd id="rateResponse">(ready)</dd>
+<dd>currency: <input id="rate.currency" type="text" /></dd>
+<dd><button onclick="rate()">call</button></dd>
+<br>
+
+<script src="debug.js"></script>
+</body>
+</html>
