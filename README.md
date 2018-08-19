@@ -25,7 +25,7 @@ Electron Application for testing nanjs.
    ````
    PS(admin)> npm install -g --production windows-build-tools
    ````
-   * add "c:\Users\<username>\.windows-build-tools\python27" to PATH environment variable.
+   * add "c:\Users\[username]\.windows-build-tools\python27" to PATH environment variable.
    * close administrator powershell.
 
 6. install packages
