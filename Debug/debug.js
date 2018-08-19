@@ -48,18 +48,19 @@ function generateQRCode() {
 }
 
 function transfer() {
-    var from    = getValue("transfer.from");
-    var to      = getValue("transfer.to");
-    var amount  = getValue("transfer.amount");
-    var message = getValue("transfer.message");
-    enanjs.transfer(from, to, amount, message).then((response) => {
+    var from       = getValue("transfer.from");
+    var to         = getValue("transfer.to");
+    var amount     = getValue("transfer.amount");
+    var message    = getValue("transfer.message");
+    var privateKey = getValue("transfer.privateKey");
+    enanjs.transfer(from, to, amount, message, privateKey).then((response) => {
         setResponse("transferResponse", JSON.stringify(response));
     }).catch((err) => {
         setResponse("transferResponse", JSON.stringify(err));
     });
 }
 
-function history(address, page) {
+function history() {
     var address = getValue("history.address");
     var page    = getValue("history.page");
     enanjs.history(address, page).then((response) => {
@@ -69,12 +70,21 @@ function history(address, page) {
     });
 }
 
-function rate(currency) {
+function rate() {
     var currency = getValue("rate.currency");
     enanjs.rate(currency).then((response) => {
         setResponse("rateResponse", JSON.stringify(response));
     }).catch((err) => {
         setResponse("rateResponse", JSON.stringify(err));
+    });
+}
+
+function balance() {
+    var address = getValue("balance.address");
+    enanjs.balance(address).then((response) => {
+        setResponse("balanceResponse", JSON.stringify(response));
+    }).catch((err) => {
+        setResponse("balanceResponse", JSON.stringify(err));
     });
 }
 

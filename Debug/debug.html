@@ -38,10 +38,11 @@ debug.html
 
 <dt>transfer</dt>
 <dd id="transferResponse">(ready)</dd>
-<dd>from:    <input id="transfer.from"    type="text" /></dd>
-<dd>to:      <input id="transfer.to"      type="text" /></dd>
-<dd>amount:  <input id="transfer.amount"  type="text" /></dd>
-<dd>message: <input id="transfer.message" type="text" /></dd>
+<dd>from:       <input id="transfer.from"       type="text" /></dd>
+<dd>to:         <input id="transfer.to"         type="text" /></dd>
+<dd>amount:     <input id="transfer.amount"     type="text" /></dd>
+<dd>message:    <input id="transfer.message"    type="text" /></dd>
+<dd>privateKey: <input id="transfer.privateKey" type="text" /></dd>
 <dd><button onclick="transfer()">call</button></dd>
 <br>
 
@@ -56,6 +57,12 @@ debug.html
 <dd id="rateResponse">(ready)</dd>
 <dd>currency: <input id="rate.currency" type="text" /></dd>
 <dd><button onclick="rate()">call</button></dd>
+<br>
+
+<dt>balance</dt>
+<dd id="balanceResponse">(ready)</dd>
+<dd>address: <input id="balance.address" type="text" /></dd>
+<dd><button onclick="balance()">call</button></dd>
 <br>
 
 <script src="debug.js"></script>

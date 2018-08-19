@@ -30,7 +30,7 @@ class ElectronNanjs {
         return response;
     }
 
-    async transfer(from, to, amount, message) {
+    async transfer(from, to, amount, message, privateKey) {
         var txHash = await nanjs.transaction.getRelayerTxHash(from, to, amount, message);
         console.log('transferResponse', txHash);
         let data = txHash.data
@@ -52,6 +52,12 @@ class ElectronNanjs {
     async rate(currency) {
         var response = await nanjs.transaction.nanjRate(currency);
         console.log('rate', response)
+        return response;
+    }
+
+    async balance(address) {
+        var response = await nanjs.transaction.nanjBalance(address);
+        console.log('balance', response)
         return response;
     }
 }
