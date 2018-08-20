@@ -89,7 +89,7 @@ Electron Application for testing nanjs.
    > npm install --save-dev electron-rebuild
    ````
 
-6. copy <electron version>
+6. copy \<electron version\>
    ````
    > electron --version
    ````
