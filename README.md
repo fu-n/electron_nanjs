@@ -59,5 +59,53 @@ Electron Application for testing nanjs.
 
 ## Mac: Build Instruction
 
-later
+1. install nvm
+   * nvm = Node Version Manager
+   * skip install description. please read official document or google.
+     * https://github.com/creationix/nvm#install-script
+     * https://qiita.com/sansaisoba/items/242a8ba95bf70ba179d3
+
+2. install nodejs via nvm
+   ````
+   > nvm install --lts
+   > nvm use --lts
+   > node -v
+   > npm -v
+   ````
+
+3. install electron
+   ````
+   > npm install -g electron
+   ````
+
+4. install packages
+   ````
+   > cd <your cloned electron_nanjs directory>
+   > npm install
+   ````
+
+5. install electron-rebuild
+   ````
+   > npm install --save-dev electron-rebuild
+   ````
+
+6. copy <electron version>
+   ````
+   > electron --version
+   ````
+
+7. rebuild some node packages for electron
+   ````
+   > ./node_modules/.bin/electron-rebuild -v <electron version>
+   ````
+   * you need rebuild after npm install/update every time.
+   * if fail, try install Xcode.
+     * https://itunes.apple.com/jp/app/xcode/id497799835?mt=12
+
+8. run app
+   ````
+   > electron .
+   ````
+   * have fun!
+   * if you want debugger, "electron --inspect 9229 ." and open "chrome://inspect" in chrome browser.
 
