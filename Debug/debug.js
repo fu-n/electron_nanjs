@@ -53,7 +53,7 @@ function generateAddress() {
 function generateQRCode() {
     var address = getValue("generateQRCode.address");
     enanjs.generateQRCode(address).then((response) => {
-        setResponse("generateQRCodeResponse", JSON.stringify(response));
+        setResponse("generateQRCodeResponse", "<img src=\"" + response + "\">");
     }).catch((err) => {
         setResponse("generateQRCodeResponse", JSON.stringify(err));
     });
