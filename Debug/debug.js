@@ -26,7 +26,7 @@ function createWallet() {
     enanjs.createWallet(mnemonic, password).then((response) => {
         setResponse("createWalletResponse", JSON.stringify(response));
     }).catch((err) => {
-        setResponse("importWalletResponse", JSON.stringify(err));
+        setResponse("createWalletResponse", JSON.stringify(err));
     });
 }
 
